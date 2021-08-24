@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha -r ts-node/register ./**/*.test.ts"
+    "test": "mocha -r ts-node/register ./**/*.test.ts",
+    "build": "copyfiles src/main/typescript/**/*.ts dist/ && copyfiles appsscript.json dist/",
+    "clean": "rm -rf dist/",
+    "predeploy": "npm run clean && npm run build",
+    "deploy": "clasp push"
   },
   "author": "",
   "license": "ISC",
@@ -13,9 +17,10 @@
     "@types/mocha": "^9.0.0",
     "@types/node": "^16.7.1",
     "chai": "^4.3.4",
+    "copyfiles": "^2.4.1",
     "mocha": "^9.1.0",
-    "typescript": "^4.3.5",
-    "ts-node": "^10.2.1"
+    "ts-node": "^10.2.1",
+    "typescript": "^4.3.5"
   },
   "dependencies": {}
 }
