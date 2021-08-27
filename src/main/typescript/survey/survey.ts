@@ -2,34 +2,24 @@ export function newSurveyStep(index: number): SurveyStep {
   switch (index) {
     case 0:
       return new Multitasking()
-      break
     case 1:
       return new UnexpectedError()
-      break
     case 2:
       return new Cooperation()
-      break
     case 3:
       return new Deadline()
-      break
     case 4:
       return new CodeQuality()
-      break
     case 5:
       return new CheckeredShirt()
-      break
     case 6:
       return new NewTechnology()
-      break
     case 7:
       return new WorkingType()
-      break
     case 8:
       return new ProjectReview()
-      break
     case 9:
       return new ImportantForProgramming()
-      break
     default:
       throw Error(`지원하지 않는 index: ${index}`)
   }
