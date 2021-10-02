@@ -1,4 +1,5 @@
-import { Survey, SurveyStep, SurveyResult, Multitasking } from './survey';
+import { SurveyResult } from './result';
+import { Survey, SurveyStep, Multitasking } from './survey';
 
 /**
  * @param answers {string[]} 답변 목록

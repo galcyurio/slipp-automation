@@ -1,3 +1,5 @@
+import { CodeGuardian, MacGyver, MadScientist, Ninja, TheArchitect } from "./result"
+
 export interface Survey { }
 
 export abstract class SurveyStep implements Survey {
@@ -17,10 +19,6 @@ export abstract class SurveyStep implements Survey {
       throw new Error(`잘못된 답변: ${answer}`)
     }
   }
-}
-
-export interface SurveyResult extends Survey {
-  type: string
 }
 
 // 0
@@ -121,29 +119,4 @@ class ImportantForProgramming extends SurveyStep {
   rightAnswer: string = "재능!"
   leftDestination: Survey = new CodeGuardian()
   rightDestination: Survey = new Ninja()
-}
-
-// 10
-class MadScientist implements SurveyResult {
-  type: string = "Mad Scientist"
-}
-
-// 11
-class MacGyver implements SurveyResult {
-  type: string = "MacGyver"
-}
-
-// 12
-class TheArchitect implements SurveyResult {
-  type: string = "The Architect"
-}
-
-// 13
-class CodeGuardian implements SurveyResult {
-  type: string = "Code Guardian"
-}
-
-// 14
-class Ninja implements SurveyResult {
-  type: string = "Ninja"
 }
