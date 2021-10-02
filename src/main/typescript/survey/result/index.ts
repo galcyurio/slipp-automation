@@ -1,30 +1,15 @@
 import { Survey } from "../survey"
 
-export interface SurveyResult extends Survey {
+export class SurveyResult implements Survey {
   type: string
+  
+  constructor(type: string) {
+    this.type = type;
+  }
 }
 
-// 10
-export class MadScientist implements SurveyResult {
-  type: string = "Mad Scientist"
-}
-
-// 11
-export class MacGyver implements SurveyResult {
-  type: string = "MacGyver"
-}
-
-// 12
-export class TheArchitect implements SurveyResult {
-  type: string = "The Architect"
-}
-
-// 13
-export class CodeGuardian implements SurveyResult {
-  type: string = "Code Guardian"
-}
-
-// 14
-export class Ninja implements SurveyResult {
-  type: string = "Ninja"
-}
+export const madScientist = new SurveyResult("Mad Scientist");
+export const macGyver = new SurveyResult("MacGyver");
+export const theArchitect = new SurveyResult("The Architect");
+export const codeGuardian = new SurveyResult("Code Guardian");
+export const ninja = new SurveyResult("Ninja");

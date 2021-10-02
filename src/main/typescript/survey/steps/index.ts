@@ -1,5 +1,5 @@
 import { Answer } from "../answer"
-import { CodeGuardian, MacGyver, MadScientist, Ninja, TheArchitect } from "../result"
+import { codeGuardian, macGyver, madScientist, ninja, theArchitect } from "../result"
 import { Survey } from "../survey";
 
 export abstract class SurveyStep implements Survey {
@@ -82,8 +82,8 @@ export class NewTechnology extends SurveyStep {
   index = 6
   question = "당신이 프로젝트를 진행하며 새로운 기술을 배워야할 할 때에..."
   answers = [
-    new Answer("저는 기술에 대해서 깊게 공부하고 시작하기 전에 여러가지 것들을 시도해보는 편이에요.", new MadScientist()),
-    new Answer("빠르게 기초를 배우고 코드에 바로 적용하는 편이에요.", new MacGyver())
+    new Answer("저는 기술에 대해서 깊게 공부하고 시작하기 전에 여러가지 것들을 시도해보는 편이에요.", madScientist),
+    new Answer("빠르게 기초를 배우고 코드에 바로 적용하는 편이에요.", macGyver)
   ]
 }
 
@@ -92,8 +92,8 @@ export class WorkingType extends SurveyStep {
   index = 7
   question = "일하는 스타일이 어떠세요?"
   answers = [
-    new Answer("우선 돌아가는 코드를 만들거에요!", new MacGyver()),
-    new Answer("모든 가능성을 고려한 코드를 작성하는 편이에요!", new TheArchitect())
+    new Answer("우선 돌아가는 코드를 만들거에요!", macGyver),
+    new Answer("모든 가능성을 고려한 코드를 작성하는 편이에요!", theArchitect)
   ]
 }
 
@@ -103,7 +103,7 @@ export class ProjectReview extends SurveyStep {
   question = "프로젝트가 끝났을 때 당신이 드는 생각은"
   answers = [
     new Answer("시간이 더 있었다면 더 잘 할 수 있었을텐데..", new WorkingType()),
-    new Answer("저는 다음 도전을 기다리죠!", new CodeGuardian())
+    new Answer("저는 다음 도전을 기다리죠!", codeGuardian)
   ]
 }
 
@@ -112,7 +112,7 @@ export class ImportantForProgramming extends SurveyStep {
   index = 9
   question = "프로그래밍에 있어 가장 중요한 것은 무엇인가요?"
   answers = [
-    new Answer("열정!", new CodeGuardian()),
-    new Answer("재능!", new Ninja())
+    new Answer("열정!", codeGuardian),
+    new Answer("재능!", ninja)
   ]
 }
