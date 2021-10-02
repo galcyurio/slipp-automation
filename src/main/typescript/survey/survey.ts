@@ -1,30 +1,3 @@
-export function newSurveyStep(index: number): SurveyStep {
-  switch (index) {
-    case 0:
-      return new Multitasking()
-    case 1:
-      return new UnexpectedError()
-    case 2:
-      return new Cooperation()
-    case 3:
-      return new Deadline()
-    case 4:
-      return new CodeQuality()
-    case 5:
-      return new CheckeredShirt()
-    case 6:
-      return new NewTechnology()
-    case 7:
-      return new WorkingType()
-    case 8:
-      return new ProjectReview()
-    case 9:
-      return new ImportantForProgramming()
-    default:
-      throw Error(`지원하지 않는 index: ${index}`)
-  }
-}
-
 export interface Survey { }
 
 export abstract class SurveyStep implements Survey {
