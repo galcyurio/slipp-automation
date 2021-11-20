@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { describe, it } from 'mocha';
-import { getSurveyResult } from '../../../main/typescript/survey/survey_app';
+import { getSurveyResult } from '../../../main/typescript/survey/survey-app';
 
 describe('app', () => {
   it('should MadScientist', () => {
